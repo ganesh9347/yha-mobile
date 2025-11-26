@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import Navbar from "./pages/Navbar";
-import Programs from "./pages/programs";
+import Programs from "./pages/Programs";
 import Memberships from "./pages/Memberships";
 import Hostels from "./pages/Hostels";
 
