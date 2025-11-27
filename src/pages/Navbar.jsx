@@ -1,11 +1,14 @@
-export default function Home({ openMenu }) {
+import logo from '../assets/logo.png' 
+
+const Logo = logo
+
+export default function Navbar({ openMenu }) {
   return (
     <div className="px-4 py-4 bg-gray-100 min-h-10">
 
       <header className="flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">Y</div>
-          <div className="text-lg font-semibold">YHA India</div>
+        <div className="flex items-center gap-1">
+          <img src={logo} alt="logo" className="w-20 h-20 object-contain" />
         </div>
 
         <button

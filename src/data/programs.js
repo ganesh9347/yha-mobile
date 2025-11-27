@@ -1,63 +1,69 @@
+import programsandamannicobar from '../assets/programsandamannicobar.jpg'
+import programsmysore from '../assets/programsmysore.jpg'
+import himalayan from '../assets/himalayan.jpg'
+import himalayanwinter from '../assets/himalayanwinter.jpg'
+import hornbillfestival from '../assets/hornbillfestival.jpeg'
+import programsvizag from '../assets/programsvizagaruku.png'
+import programszukouvakkey from '../assets/programszukouVakkey.jpg'
+import malaysia from '../assets/yhaindiamalaysia.jpg'
+import munnarcycling from '../assets/munnarcycling.jpg'
+import twang from '../assets/tawang-assam.jpg'
+
+
 export const programs = [
    {
     id: 1,
-    title: "Adventure Trips",
-    description: "Exciting trekking and adventure programs for youth.",
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=800&auto=format&fit=crop"
+    title: "Andaman & Nicobar",
+    description: "Andaman & Nicobar Eco Study CumTraining Programme Winter 2025.",
+    image: programsandamannicobar
   },
   {
     id: 3,
-    title: "Leadership Programs",
-    description: "Develop confidence, teamwork, and leadership qualities.",
-    image: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?q=80&w=800&auto=format&fit=crop"
+    title: "Mysore Exploration",
+    description: "Mysore Exploration and Trekking cum Training Expedition 2025.",
+    image: programsmysore
   },
   {
     id: 4,
-    title: "Cultural Exchange",
-    description: "Meet youth from different states and learn cultures.",
-    image: "https://images.unsplash.com/photo-1529078155058-5d716f45d604?q=80&w=800&auto=format&fit=crop"
+    title: "National Himalayan",
+    description: "National Himalayan Kedarkantha Winter Trekking Cum Training Expedition 2025-26",
+    image: himalayan
   },
   {
     id: 5,
-    title: "Heritage Walks",
-    description: "Guided tours to explore India's historical monuments.",
-    image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop"
+    title: "National Himalayan Winter",
+    description: "National Himalayan Winter Brahmatal Trekking Cum Training Expedition 2025-26",
+    image: himalayanwinter
   },
   {
     id: 6,
-    title: "Wildlife Exploration",
-    description: "Discover wildlife through safe and guided eco-tours.",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=800&auto=format&fit=crop"
+    title: "YHA India-HI Malaysia",
+    description: "YHA India-HI Malaysia, Visit Malaysia, Truly Asia Tour cum Training 2025",
+    image: malaysia
   },
   {
     id: 7,
-    title: "Fitness & Wellness Camps",
-    description: "Yoga, meditation, and fitness activities for youth.",
-    image: "https://images.unsplash.com/photo-1532798442725-41036acc7489?q=80&w=800&auto=format&fit=crop"
+    title: "National Munnar Cycling",
+    description: "National Munnar Cycling cum Training Expedition 2025 By Tamil Nadu State",
+    image: munnarcycling
   },
   {
     id: 8,
-    title: "River Rafting Camp",
-    description: "Experience thrilling white-water rafting adventures.",
-    image: "https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?q=80&w=800&auto=format&fit=crop"
+    title: "twang assam",
+    description: "Tawang-Assam Trekking & Training Expedition 2025 (October) (By Assam State Branch)",
+    image: twang
   },
   {
     id: 9,
-    title: "Photography Expeditions",
-    description: "Learn travel and wildlife photography techniques.",
-    image: "https://images.unsplash.com/photo-1502920514313-52581002a659?q=80&w=800&auto=format&fit=crop"
+    title: "Hornbill Festival",
+    description: "Hornbill Festival, Nagaland via Assam: Trekking and Training Expedition 2025 (By Assam State Branch)",
+    image: hornbillfestival
   },
   {
     id: 10,
-    title: "Village Tourism",
+    title: "Dzukou Valley",
     description: "Stay in rural areas and explore traditional lifestyles.",
-    image: "https://images.unsplash.com/photo-1509099836639-18ba1795216d?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    id: 11,
-    title: "Cycling Expeditions",
-    description: "Ride through scenic routes and explore beautiful landscapes.",
-    image: "https://images.unsplash.com/photo-1505840717430-904bcc60fa8b?q=80&w=800&auto=format&fit=crop"
+    image: programszukouvakkey
   },
   {
     id: 12,
