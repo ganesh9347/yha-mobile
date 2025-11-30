@@ -1,6 +1,9 @@
-import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useNavigate, useLocation } from "react-router-dom";
+import Login from "./pages/Login";
+import { Navigate } from "react-router-dom";
+import Footer from './components/Footer';
 import { useState } from "react";
-
+import Signup from "./pages/Signup";
 import Navbar from "./pages/Navbar";
 import Programs from "./pages/Programs";
 import Memberships from "./pages/Memberships";
@@ -15,17 +18,37 @@ function AppRouter() {
     setMenuOpen(false);
   };
 
+
+  const handleLogout = () => {
+    localStorage.removeItem("user"); 
+    setMenuOpen(false) // your login storage key
+    navigate("/login");
+  };
+
+  const isLoggedIn = localStorage.getItem("isLoggedIn");
+
+   const location = useLocation();
+
+   const hideFooter = ["/login", "/signup"].includes(location.pathname);
+
   return (
     <div className="relative">
 
       {/* ROUTES */}
       <Navbar  openMenu={() => setMenuOpen(true)} />
       <Routes>
-        <Route path="/" element={<Programs/>} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={isLoggedIn ? <Programs /> : <Navigate to="/login" />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/memberships" element={<Memberships />} />
         <Route path="/hostels" element={<Hostels />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
+
+       {!hideFooter && <Footer />}
+
+      
 
       {/* SLIDE MENU */}
       {menuOpen && (
@@ -44,11 +67,19 @@ function AppRouter() {
           </button>
 
           <button
+          onClick={handleLogout}
+          className=" text-lg font-semibold mt-4 border-t pt-4"
+          >
+          Logout
+          </button>
+
+          <button
             className="mt-4 text-red-500"
             onClick={() => setMenuOpen(false)}
           >
             Close
           </button>
+
 
         </div>
       )}

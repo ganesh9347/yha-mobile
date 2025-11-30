@@ -1,4 +1,78 @@
-import logo from '../assets/logo.png' 
+import {Link,  useNavigate} from 'react-router-dom'
+import logo from "../assets/logo.png";
+
+export default function Navbar({ openMenu }) {
+
+
+  return (
+    <nav className="w-full shadow-sm px-4 py-0 bg-gray-100 ">
+      
+      {/* Navbar Wrapper */}
+      <div className="flex items-center justify-between">
+
+        {/* LOGO - Centered on small devices */}
+        <div className="flex items-center">
+          <Link to="/"><img
+            src={logo}
+            alt="logo"
+            className="w-28 h-28 object-contain" 
+            /* Modern clean size */
+          />
+          </Link>
+        </div>
+
+        {/* MENU BUTTON - right side */}
+        <button
+          aria-label="menu"
+          onClick={openMenu}
+          className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+      </div>
+
+    </nav>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* import logo from '../assets/logo.png' 
 
 const Logo = logo
 
@@ -8,7 +82,7 @@ export default function Navbar({ openMenu }) {
 
       <header className="flex items-center justify-between">
         <div className="flex items-center gap-1">
-          <img src={logo} alt="logo" className="w-20 h-20 object-contain" />
+          <img src={logo} alt="logo" className="w-28 h-28 object-contain" />
         </div>
 
         <button
@@ -27,6 +101,7 @@ export default function Navbar({ openMenu }) {
 }
 
 
+*/
 
 
 
