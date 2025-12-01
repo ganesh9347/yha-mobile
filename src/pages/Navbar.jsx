@@ -1,27 +1,24 @@
 import {Link,  useNavigate} from 'react-router-dom'
 import logo from "../assets/logo.png";
 
+
+
 export default function Navbar({ openMenu }) {
 
 
   return (
-    <nav className="w-full shadow-sm px-4 py-0 bg-gray-100 ">
-      
-      {/* Navbar Wrapper */}
-      <div className="flex items-center justify-between">
+    <nav className="h-25">
+      <div className="flex items-center  bg-gray-100 justify-between h-25">
 
-        {/* LOGO - Centered on small devices */}
-        <div className="flex items-center">
-          <Link to="/"><img
+    
+          <Link to="/" className="h-12 flex items-center"><img
             src={logo}
             alt="logo"
-            className="w-28 h-28 object-contain" 
-            /* Modern clean size */
+            className="w-full h-14 object-contain" 
           />
           </Link>
-        </div>
 
-        {/* MENU BUTTON - right side */}
+      
         <button
           aria-label="menu"
           onClick={openMenu}
@@ -47,8 +44,7 @@ export default function Navbar({ openMenu }) {
 
     </nav>
   );
-}
-
+} 
 
 
 
