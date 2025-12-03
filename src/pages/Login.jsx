@@ -26,7 +26,7 @@ const Login = () => {
       <div className="w-full max-w-md bg-white rounded-xl shadow-md p-8">
 
         {/* Logo */}
-        <img src={logo} alt="logo" className="w-full h-15  object-contain mx-auto mb-4" />
+        <img src={logo} alt="logo" className="w-full h-15 object-contain mx-auto mb-4" />
 
         <h2 className="text-center text-2xl font-semibold mb-6">
           Sign In to Your Account
@@ -145,12 +145,7 @@ const Login = () => {
             Login
           </button>
         </form>
-
-        {/* Sign Up */}
-        <p className="text-center mt-4 text-gray-600">
-          Don’t have an account?{" "}
-          <Link to="/signup"><span className="text-blue-700 cursor-pointer">Sign Up</span></Link>
-        </p>
+        
       </div>
     </div>
   );

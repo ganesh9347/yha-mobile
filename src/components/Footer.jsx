@@ -11,7 +11,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="fixed bottom-0 left-0 w-full bg-white shadow-md z-50 py-2">
+    <footer className="fixed bottom-0 left-0 w-full bg-white shadow-md z-50 py-2 h-15">
       <div className="flex justify-around items-center text-gray-600 text-sm">
 
         {menuItems.map((item) => {

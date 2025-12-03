@@ -43,12 +43,10 @@ export default function Navbar({ openMenu }) {
           )}
           </div>
 
-          <button
-          onClick={handleLogout}
-          className="mr-4 text-lg font-semibold cursor-pointer"
-          >
-          Logout
-          </button>
+          
+          <Link to="/profile" className="mr-4 font-semibold">
+               Profile
+          </Link>
 
       </div>
 

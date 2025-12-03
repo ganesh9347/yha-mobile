@@ -7,8 +7,10 @@ import Signup from "./pages/Signup";
 import Navbar from "./pages/Navbar";
 import Programs from "./pages/Programs";
 import ProgramDetails from "./pages/ProgramDetails";
+import Home from "./pages/Home";
 import Memberships from "./pages/Memberships";
 import HostelBooking from "./pages/HostelBooking";
+import Profile from "./pages/Profile";
 import Hostels from "./pages/Hostels";
 
 function AppRouter() {
@@ -40,13 +42,14 @@ function AppRouter() {
       <Navbar  openMenu={() => setMenuOpen(true)} />
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={isLoggedIn ? <Programs /> : <Navigate to="/login" />} />
+        <Route path="/" element={isLoggedIn ? <Home /> : <Navigate to="/login" />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/memberships" element={<Memberships />} />
         <Route path="/hostels" element={<Hostels />} />
         <Route path="/program/:id" element={<ProgramDetails/>} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/hostel/:id" element={<HostelBooking />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
 
