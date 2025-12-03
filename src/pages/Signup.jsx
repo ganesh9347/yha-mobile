@@ -38,7 +38,7 @@ const Signup = () => {
       <div className="w-full max-w-md bg-white rounded-xl shadow-md p-8">
 
         {/* Logo */}
-        <img src={logo} alt="logo" className="w-20 mx-auto mb-4" />
+        <img src={logo} alt="logo" className="w-full h-15 object-contain mx-auto mb-4" />
 
         <h2 className="text-center text-2xl font-semibold mb-6">
           Create Your Account

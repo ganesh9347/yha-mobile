@@ -6,7 +6,9 @@ import { useState } from "react";
 import Signup from "./pages/Signup";
 import Navbar from "./pages/Navbar";
 import Programs from "./pages/Programs";
+import ProgramDetails from "./pages/ProgramDetails";
 import Memberships from "./pages/Memberships";
+import HostelBooking from "./pages/HostelBooking";
 import Hostels from "./pages/Hostels";
 
 function AppRouter() {
@@ -42,7 +44,9 @@ function AppRouter() {
         <Route path="/programs" element={<Programs />} />
         <Route path="/memberships" element={<Memberships />} />
         <Route path="/hostels" element={<Hostels />} />
+        <Route path="/program/:id" element={<ProgramDetails/>} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/hostel/:id" element={<HostelBooking />} />
         <Route path="*" element={<Navigate to="/login" />} />
       </Routes>
 
