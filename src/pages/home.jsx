@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
-import {programs} from '../data/programs'
+import HostelCard from "../components/HostelCard";
+import {programs} from '../data/programs';
+import heroimage from '../assets/heroimage.jpg';
+import { hostels } from "../data/hostels";
 
 export default function Home() {
   return (
@@ -10,7 +13,7 @@ export default function Home() {
         className="rounded-sm w-full h-[90vh] bg-cover bg-center relative flex items-center"
         style={{
           backgroundImage:
-            "url('https://images.pexels.com/photos/672358/pexels-photo-672358.jpeg?auto=compress')",
+            `url(${heroimage})`,
         }}
       >
         {/* Overlay */}
@@ -79,13 +82,13 @@ export default function Home() {
       </div>
 
       <div className="m-3 flex flex-row justify-between">
-        <h1 className="">Programs</h1>
+        <h1 className="text-xl">Programs</h1>
         <Link to="/programs"><p>View All</p></Link>
       </div>
 
       {/* programs list */}
-      <div className="flex flex-col gap-4">
-    {programs.slice(0, 3).map(p => (
+      <div className="flex flex-col gap-4 md:grid grid-cols-3">
+    {programs.slice(0, 4).map(p => (
       <div key={p.id} className="m-2 p-4 rounded-lg shadow-sm">
         <img src={p.image} alt={p.name} className="w-full h-60 object-cover rounded-md mb-3" />
         <h3 className="font-semibold text-lg">{p.name}</h3>
@@ -100,6 +103,21 @@ export default function Home() {
       </div>
     ))}
   </div>
+
+
+  <div className="m-3 flex flex-row justify-between">
+        <h1 className="text-xl">Hostels</h1>
+        <Link to="/hostels"><p>View All</p></Link>
+      </div>
+
+
+
+  {/* Hostels List */}
+  <div className="space-y-4 md:grid grid-cols-3">
+    {hostels.slice(0,7).map(h => 
+      <HostelCard key={h.id} item={h} />
+    )}
+    </div>
 
     </div>
   );

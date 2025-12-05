@@ -26,10 +26,10 @@ export default function Hostels() {
     <div className="p-4">
 
       {/* ---------- FILTER UI START ---------- */}
-      <div className="space-y-4 mb-6">
+      <div className="bg-gray-100 justify-center shadow-md rounded-xl p-4 space-y-4 md:space-y-0 md:flex md:items-end md:gap-4 md:flex flex-wrap ">
 
         {/* State */}
-        <div className="space-y-1">
+        <div className="space-y-1 md:w-3/10">
           <label className="text-sm font-medium">State</label>
           <select
             value={stateFilter}
@@ -44,7 +44,7 @@ export default function Hostels() {
         </div>
 
         {/* City */}
-        <div className="space-y-1">
+        <div className="space-y-1 md:w-3/10">
           <label className="text-sm font-medium">City</label>
           <input
             type="text"
@@ -56,7 +56,7 @@ export default function Hostels() {
         </div>
 
         {/* Type */}
-        <div className="space-y-1">
+        <div className="space-y-1 md:w-3/10">
           <label className="text-sm font-medium">Type</label>
           <select
             value={typeFilter}
@@ -70,7 +70,7 @@ export default function Hostels() {
         </div>
 
         {/* Search Bar */}
-        <div className="space-y-1">
+        <div className="space-y-1 w-3/5">
           <input
             type="text"
             placeholder="Search Hostels"
@@ -81,7 +81,7 @@ export default function Hostels() {
         </div>
 
         {/* Search Button */}
-        <button className="w-full bg-orange-500 text-white py-3 rounded-lg text-lg font-semibold">
+        <button className="w-1/5 bg-orange-500 text-white py-2 cursor-pointer rounded-lg text-lg font-semibold">
           Search →
         </button>
 
@@ -89,7 +89,7 @@ export default function Hostels() {
       {/* ---------- FILTER UI END ---------- */}
 
       {/* ---------- HOSTEL LIST ---------- */}
-      <div className="space-y-4">
+      <div className="space-y-4 md:grid grid-cols-3">
         {filteredHostels.length ? (
           filteredHostels.map(h => <HostelCard key={h.id} item={h} />)
         ) : (

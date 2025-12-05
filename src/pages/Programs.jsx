@@ -24,16 +24,16 @@ export default function Programs() {
   });
 
   return (
-    <div className="p-4 bg-gray-100 space-y-4">
+    <div className="p-4 bg-gray-100 space-y-6">
 
       {/* Page Title */}
-      <h1 className="text-xl font-bold">Programs</h1>
+      <h1 className="text-xl font-bold md:text-2xl">Programs</h1>
 
       {/* FILTER BOX */}
-      <div className="bg-white bg-gray-100 shadow-md rounded-xl p-4 space-y-4">
+      <div className=" bg-gray-100 justify-center shadow-md rounded-xl p-4 space-y-4 md:space-y-0 md:flex md:items-end md:gap-4 md:flex-wrap">
 
         {/* TYPE */}
-        <div>
+        <div className="md:w-1/5">
           <label className="block text-sm font-semibold mb-1">Type</label>
           <select
             value={type}
@@ -48,7 +48,7 @@ export default function Programs() {
         </div>
 
         {/* CATEGORY */}
-        <div>
+        <div className="md:w-1/5">
           <label className="block text-sm font-semibold mb-1">Category</label>
           <select
             value={category}
@@ -63,7 +63,7 @@ export default function Programs() {
         </div>
 
         {/* SEASON */}
-        <div>
+        <div className="md:w-1/5">
           <label className="block text-sm font-semibold mb-1">Season</label>
           <select
             value={season}
@@ -78,7 +78,7 @@ export default function Programs() {
         </div>
 
         {/* STATE */}
-        <div>
+        <div className="md:w-1/5">
           <label className="block text-sm font-semibold mb-1">State</label>
           <select
             value={state}
@@ -94,7 +94,8 @@ export default function Programs() {
         </div>
 
         {/* SEARCH BOX */}
-        <div>
+        <div className="md:w-[70%]">
+          <label className="block text-sm font-semibold mb-1 md:hidden"></label>
           <input
             type="text"
             placeholder="Search Programs"
@@ -105,21 +106,25 @@ export default function Programs() {
         </div>
 
         {/* SEARCH BUTTON */}
-        <button className="w-full bg-orange-500 text-white py-2 rounded-lg text-center font-semibold">
+        <div className="md:w-[12%]">
+          <button className="w-full bg-orange-500 text-white py-2 rounded-lg text-center font-semibold md:py-[10px]">
           Search →
-        </button>
+          </button>
+        </div>
       </div>
 
       {/* PROGRAM LIST */}
-      <div className="space-y-4">
+      <div className="space-y-4 pb-6">
         {filteredPrograms.length === 0 ? (
           <p className="text-gray-500 text-center">No programs found</p>
         ) : (
-          filteredPrograms.map((p) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {filteredPrograms.map((p) => (
             <Link key={p.id} to={`/program/${p.id}`}>
               <ProgramCard item={p} />
             </Link>
-          ))
+          ))}
+          </div>
         )}
       </div>
     </div>

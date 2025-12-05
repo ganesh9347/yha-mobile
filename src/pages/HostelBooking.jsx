@@ -18,7 +18,7 @@ export default function HostelBooking() {
         <img
           src={hostel.image}
           alt="hostel"
-          className="w-full h-48 rounded-xl object-cover"
+          className="w-full h-88 rounded-xl object-cover"
         />
 
         <h1 className="text-xl font-bold mt-3">{hostel.name}</h1>
