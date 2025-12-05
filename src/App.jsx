@@ -7,7 +7,7 @@ import Signup from "./pages/Signup";
 import Navbar from "./pages/Navbar";
 import Programs from "./pages/Programs";
 import ProgramDetails from "./pages/ProgramDetails";
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import Memberships from "./pages/Memberships";
 import HostelBooking from "./pages/HostelBooking";
 import Profile from "./pages/Profile";
